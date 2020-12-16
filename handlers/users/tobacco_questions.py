@@ -4,7 +4,7 @@ from loader import dp
 
 
 @dp.message_handler(commands=['about_marking'])
-async def work_process(message: types.Message):
+async def about_marking(message: types.Message):
     await message.reply("Что такое (ИС МОТП)? "
                         "ИС МОТП - информационная система маркировки и оборота табачной продукции.\n\n"
                         "Что такое система маркировки? Для чего она вводится в России?\n"
@@ -198,7 +198,7 @@ async def work_process(message: types.Message):
 
 
 @dp.message_handler(commands=['liability_and_fines'])
-async def for_whom(message: types.Message):
+async def liability_and_fines(message: types.Message):
     await message.reply(
         'Какую ответственность будут нести розничные магазины в случае неправильного использования контрольно-кассовой '
         'техники?\n'

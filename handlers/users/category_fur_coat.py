@@ -6,7 +6,7 @@ from loader import dp
 
 
 @dp.message_handler(commands=['fur_coat'])
-async def main_questions(message: types.Message):
+async def fur_coat(message: types.Message):
     await message.reply(
         'Маркировка шуб\n'
         '/about_marking - О маркировке\n'
@@ -18,5 +18,5 @@ async def main_questions(message: types.Message):
         '/how_to_import - Как ввезти товар на территорию Российской Федерации не из стран ЕАЭС\n'
         '/shipping - Что делать при отгрузке товаров\n'
         '/retailing - Что делать при розничной продаже товаров\n'
-        '/badge_damaged - Что делать, если контрольный (идентификационный) знак испорчен'
+        '/badge_damaged - Что делать, если контрольный (идентификационный) знак испорчен\n'
     )

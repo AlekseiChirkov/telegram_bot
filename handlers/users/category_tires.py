@@ -6,7 +6,7 @@ from loader import dp
 @dp.message_handler(commands=['tires'])
 async def tires(message: types.Message):
     await message.reply(
-        'Маркировка фотоаппаратов и ламп-вспышек\n'
+        'Маркировка шин и покрышек\n'
         '/general_issues - Общие вопросы\n'
         '/marking - Об эксперименте\n'
         '/registration - Регистрация участника оборота товаров\n'

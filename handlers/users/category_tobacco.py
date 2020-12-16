@@ -4,7 +4,7 @@ from loader import dp
 
 
 @dp.message_handler(commands=['tobacco'])
-async def main_questions(message: types.Message):
+async def tobacco(message: types.Message):
     await message.reply(
         'Маркировка табака\n'
         '/about_marking - О маркировке\n'

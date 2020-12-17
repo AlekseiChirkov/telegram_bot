@@ -2,8 +2,6 @@ from aiogram import types
 
 from loader import dp
 
-# шубы
-
 
 @dp.message_handler(commands=['fur_coat'])
 async def fur_coat(message: types.Message):

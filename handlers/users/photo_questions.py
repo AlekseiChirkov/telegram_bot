@@ -1,24 +1,21 @@
 from aiogram import types
 
 from loader import dp
+from data.question_parser import get_headers, get_paragraphs
 
 
-@dp.message_handler(commands=['general_issues'])
-async def general_issues(message: types.Message):
+@dp.message_handler(commands=['about_photo'])
+async def about_photo(message: types.Message):
     await message.reply(
-         """Как осуществляется ввоз импортного товара, подлежащего обязательной маркировке
-Согласно Рекомендованный алгоритм по ввозу на территорию РФ импортного товара из стран вне ЕАЭС"""
+        f'{str(get_headers()[33])}\n\n'
+        f'{str(get_paragraphs()[32])}'
     )
 
-@dp.message_handler(commands=['about'])
-async def about(message: types.Message):
+
+@dp.message_handler(commands=['photo_exp'])
+async def photo_exp(message: types.Message):
     await message.reply(
-         """Как принять участие в эксперименте?
-Для того, чтобы принять участие в эксперименте необходимо зарегистрироваться на сайте оператора системы — https://ЧестныйЗНАК.рф/business/projects/photo_cameras_and_flashbulbs/
-
-Какую пользу получают участники от эксперимента?
-Те компании, которые примут решение участвовать в эксперименте, смогут первыми протестировать работу системы маркировки. Принять участие в заседаниях проектно-экспертных и рабочих групп. Внести свои предложения в процесс маркировки продукции.
-
-Какие виды продукции подлежат маркировке?
-Маркировке подлежат все фотокамеры (кроме кинокамер), фотовспышки и лампы-вспышки, на основании распоряжения Правительства РФ от 28.04.2018 № 792-р, по кодам ОКПД-2 — 26.70.12 26.70.14 26.70.17 26.70.19, коду ТН ВЭД ЕАЭС 9006."""
+        f'{str(get_headers()[34])}\n\n'
+        f'{str(get_paragraphs()[33])}'
     )
+

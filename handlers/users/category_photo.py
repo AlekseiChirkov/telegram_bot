@@ -7,6 +7,6 @@ from loader import dp
 async def photo(message: types.Message):
     await message.reply(
         'Маркировка фотоаппаратов и ламп-вспышек\n'
-        '/general_issues - Общие вопросы\n'
-        '/about - Об эксперименте\n'
+        '/about_photo - Общие вопросы\n'
+        '/photo_exp - Об эксперименте\n'
     )

@@ -6,7 +6,7 @@ from loader import dp
 @dp.message_handler(commands=['main'])
 async def main_questions(message: types.Message):
     await message.reply(
-        'Основные вопросы:\n'
+        'Основные вопросы:\n\n'
         '/what_for - Зачем нужна система маркировки?\n'
         '/for_whom - Для кого нужна система маркировки?\n'
         '/work_process - Как работает и из чего состоит процесс маркировки?\n'

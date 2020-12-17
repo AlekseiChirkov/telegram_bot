@@ -7,6 +7,6 @@ from loader import dp
 async def tobacco(message: types.Message):
     await message.reply(
         'Маркировка табака\n'
-        '/about_marking - О маркировке\n'
-        '/liability_and_fines - Ответственность участников оборота и штрафы\n'
+        '/about_tobacco - О маркировке\n'
+        '/rules_tobacco - Ответственность участников оборота и штрафы\n'
     )

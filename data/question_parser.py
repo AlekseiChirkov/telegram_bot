@@ -1,13 +1,17 @@
 import requests
-
 from bs4 import BeautifulSoup
 
 
 def get_html():
     """Getting html page content"""
+
+    headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64)'}
     url = 'https://честныйзнак.рф/vopros-otvet/'
-    page = requests.get(url).text
+    session = requests.Session()
+    response = session.get(url, headers=headers)
+    page = response.text
     soup = BeautifulSoup(page, 'html.parser')
+
     return soup
 
 

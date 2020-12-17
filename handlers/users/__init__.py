@@ -10,6 +10,13 @@ from .medicine_questions import dp
 from .category_shoes import dp
 from .shoes_questions import dp
 from .category_tobacco import dp
+from .tobacco_questions import dp
+from .category_photo import dp
+from .photo_questions import dp
+from .category_tires import dp
+from .tires_questions import dp
+from .category_industrial import dp
+from .industrial_questions import dp
 
 
 __all__ = ["dp"]

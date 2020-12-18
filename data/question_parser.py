@@ -29,4 +29,5 @@ def get_paragraphs():
     for i in soup.findAll('div', {'class': 'faq-list1__hide'}):
         p = str(i.text)
         paragraphs.append(p.strip())
+
     return paragraphs

@@ -7,5 +7,5 @@ from loader import dp
 async def industrial(message: types.Message):
     await message.reply(
         'Маркировка товаров легкой промышленности\n'
-        '/general - Общие вопросы\n'
+        '/about_industrial - Общие вопросы\n'
     )

@@ -2,6 +2,8 @@ from aiogram import types
 
 from loader import dp
 
+from keyboards.default import category_main_menu
+
 
 @dp.message_handler(commands=['main'])
 async def main_questions(message: types.Message):
@@ -16,5 +18,6 @@ async def main_questions(message: types.Message):
         '/who_response - Кто отвечает за работу системы маркировки и прослеживаемости товаров?\n'
         '/what_goods - Какие товары уже сейчас маркируются?\n'
         '/price_growth - Вырастут ли из-за маркировки цены?\n'
-        '/efficiency - Эффективна ли система маркировки?\n'
+        '/efficiency - Эффективна ли система маркировки?\n',
+        reply_markup=category_main_menu,
     )

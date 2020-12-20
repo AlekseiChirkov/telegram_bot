@@ -1,14 +1,17 @@
 from aiogram import types
+from aiogram.types import CallbackQuery
 
+from keyboards.inline.category_main_buttons import category_main_choice
 from loader import dp
 from data.question_parser import get_headers, get_paragraphs
 
 
-@dp.message_handler(commands=['what_for'])
-async def what_for(message: types.Message):
-    await message.reply(
+@dp.callback_query_handler(text="what_for")
+async def main_questions(call: CallbackQuery):
+    await call.message.answer(
         f'{str(get_headers()[0])}\n\n'
-        f'{str(get_paragraphs()[0])}'
+        f'{str(get_paragraphs()[0])}',
+        reply_markup=category_main_choice,
     )
 
 

@@ -1,6 +1,7 @@
 from aiogram import types
 
 from loader import dp
+from keyboards.default import questions_menu
 
 
 @dp.message_handler(commands=['questions'])
@@ -15,5 +16,6 @@ async def questions(message: types.Message):
         '/medicine - маркировка лекарств.\n'
         '/photo - маркировка фотоаппаратов и ламп вспышек.\n'
         '/tires - маркировка шин и покрышек.\n'
-        '/industrial - маркировка товаров легкой промышленности.\n'
+        '/industrial - маркировка товаров легкой промышленности.\n',
+        reply_markup=questions_menu,
     )

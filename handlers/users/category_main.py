@@ -1,11 +1,12 @@
-from aiogram import types
+from aiogram.types import CallbackQuery
 
+from keyboards.inline.category_main_buttons import category_main_choice
 from loader import dp
 
 
-@dp.message_handler(commands=['main'])
-async def main_questions(message: types.Message):
-    await message.reply(
+@dp.callback_query_handler(text="main")
+async def main_questions(call: CallbackQuery):
+    await call.message.answer(
         'Основные вопросы:\n\n'
         '/what_for - Зачем нужна система маркировки?\n'
         '/for_whom - Для кого нужна система маркировки?\n'
@@ -16,5 +17,8 @@ async def main_questions(message: types.Message):
         '/who_response - Кто отвечает за работу системы маркировки и прослеживаемости товаров?\n'
         '/what_goods - Какие товары уже сейчас маркируются?\n'
         '/price_growth - Вырастут ли из-за маркировки цены?\n'
-        '/efficiency - Эффективна ли система маркировки?\n'
+        '/efficiency - Эффективна ли система маркировки?\n',
+        reply_markup=category_main_choice,
     )
+
+#1

@@ -9,3 +9,4 @@ async def shoes(message: types.Message):
         'Маркировка обуви\n\n'
         '/about_shoes - Общие вопросы\n'
     )
+

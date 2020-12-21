@@ -1,12 +1,17 @@
-from aiogram import types
+from aiogram.types import CallbackQuery
 
 from loader import dp
+from keyboards.inline.help_button import help_choice
 
 
-@dp.message_handler(commands=['help'])
-async def display_commands(message: types.Message):
-    await message.reply(
-        'Вы можете ввести следующие команды:\n'
-        '/questions - выбрать интересующий вас вопрос.\n'
-        '/ask - задать свой вопрос.'
+@dp.callback_query_handler(text="help")
+async def display_commands(call: CallbackQuery):
+    await call.message.answer(
+        "Вы можете выбрать следующие разделы:\n"
+        "'Вопросы' - выбрать интересующий вас вопрос.\n"
+        "'Задать вопрос' - задать свой вопрос.",
+        reply_markup=help_choice,
     )
+
+#1
+

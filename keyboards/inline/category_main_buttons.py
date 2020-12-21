@@ -33,3 +33,4 @@ category_main_choice = InlineKeyboardMarkup(inline_keyboard=[
         InlineKeyboardButton(text="Эффективна ?", callback_data="efficiency"),
     ],
 ])
+#1

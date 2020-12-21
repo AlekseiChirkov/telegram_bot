@@ -18,3 +18,4 @@ async def fur_coat(message: types.Message):
         '/retail_fur_coat - Что делать при розничной продаже товаров\n'
         '/badge_damaged_fur_coat - Что делать, если контрольный (идентификационный) знак испорчен\n'
     )
+

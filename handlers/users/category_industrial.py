@@ -9,3 +9,4 @@ async def industrial(message: types.Message):
         'Маркировка товаров легкой промышленности\n'
         '/about_industrial - Общие вопросы\n'
     )
+

@@ -19,3 +19,5 @@ async def questions(call: CallbackQuery):
         "'Легкая покрышка' - маркировка товаров легкой промышленности.\n",
         reply_markup=questions_choice,
     )
+
+# 1

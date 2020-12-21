@@ -85,3 +85,5 @@ async def work_process(message: types.Message):
         f'{str(get_headers()[10])}\n\n'
         f'{str(get_paragraphs()[10])}'
     )
+
+#1

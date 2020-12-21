@@ -20,3 +20,5 @@ async def main_questions(call: CallbackQuery):
         '/efficiency - Эффективна ли система маркировки?\n',
         reply_markup=category_main_choice,
     )
+
+#1

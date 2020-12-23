@@ -1,12 +1,13 @@
-from aiogram import types
-
+from aiogram.types import CallbackQuery
 from loader import dp
+from keyboards.inline.category_industrial_buttons import category_industrial_choice
 
 
-@dp.message_handler(commands=['industrial'])
-async def industrial(message: types.Message):
-    await message.reply(
-        'Маркировка товаров легкой промышленности\n'
-        '/about_industrial - Общие вопросы\n'
+@dp.callback_query_handler(text='industrial')
+async def industrial(call: CallbackQuery):
+    await call.message.answer(
+        'Маркировка товаров легкой промышленности\n\n'
+        'Общие вопросы\n',
+        reply_markup=category_industrial_choice,
     )
 

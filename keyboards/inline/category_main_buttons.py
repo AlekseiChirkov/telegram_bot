@@ -21,10 +21,15 @@ category_main_choice = InlineKeyboardMarkup(inline_keyboard=[
         InlineKeyboardButton(text="Нельзя подделать ?", callback_data="make_fake"),
     ],
     [
-        InlineKeyboardButton(text="Кто отвечат ?", callback_data="who_response"),
+        InlineKeyboardButton(text="Кто отвечает ?", callback_data="who_response"),
     ],
     [
         InlineKeyboardButton(text="Какие товары ?", callback_data="what_goods"),
+
+    ],
+    [
+        InlineKeyboardButton(text="ЦРПТ ?", callback_data="CRPT"),
+
     ],
     [
         InlineKeyboardButton(text="Рост цен ?", callback_data="price_growth"),

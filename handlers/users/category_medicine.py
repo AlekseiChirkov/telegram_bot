@@ -1,20 +1,23 @@
 from aiogram import types
+from aiogram.types import CallbackQuery
 
+from keyboards.inline.category_medicine_buttons import category_medicine_choice
 from loader import dp
 
 
-@dp.message_handler(commands=['medicine'])
-async def medicine(message: types.Message):
-    await message.reply(
+@dp.callback_query_handler(text="medicine")
+async def medicine(call: CallbackQuery):
+    await call.message.answer(
         'Маркировка лекарств\n\n'
-        '/medicine_exp - Об эксперименте\n'
-        '/personal_account - Личный кабинет участника: регистрация, авторизация, Усиленная квалифицированная '
+        'Эксперимент - об эксперименте\n'
+        'Кабинет участника - личный кабинет участника: регистрация, авторизация, Усиленная квалифицированная\n'
         'электронная подпись (УКЭП)\n'
-        '/emission_registrars = Регистраторы эмиссии\n'
-        '/disposal_registrars Регистраторы выбытия\n'
-        '/digital_code = Цифровой код: генерация, нанесение, считывание\n'
-        '/equipment = Оборудование\n'
-        '/basic_actions = Основные действия участников системы мониторинга движения лекарственных препаратов для '
+        'Эмиссия - регистраторы эмиссии\n'
+        'Выбытие - регистраторы выбытия\n'
+        'Цифровой код - цифровой код: генерация, нанесение, считывание\n'
+        'Оборудование - оборудование\n'
+        'Основные действия - основные действия участников системы мониторинга движения лекарственных препаратов для '
         'медицинского применения\n'
-        '/automation = Автоматизируемые процессы и регистрация сведений в ИС МДЛП\n'
+        'АП и РС - Автоматизируемые процессы и регистрация сведений в ИС МДЛП\n',
+        reply_markup=category_medicine_choice,
     )

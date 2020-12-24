@@ -1,12 +1,14 @@
-from aiogram import types
-
+from aiogram.types import CallbackQuery
 from loader import dp
+
+from keyboards.inline.category_industrial_buttons import category_industrial_choice
 from data.question_parser import get_headers, get_paragraphs
 
 
-@dp.message_handler(commands=['about_industrial'])
-async def about_industrial(message: types.Message):
-    await message.reply(
+@dp.callback_query_handler(text='about_industrialq') # Message is too long!!  add q in text for work bot
+async def about_industrial(call: CallbackQuery):
+    await call.message.answer(
         f'{str(get_headers()[52])}\n\n'
-        f'{str(get_paragraphs()[51])}'
+        f'{str(get_paragraphs()[51])}',
+        reply_markup=category_industrial_choice,
     )

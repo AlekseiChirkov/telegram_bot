@@ -1,25 +1,26 @@
-from aiogram import types
-
+from aiogram.types import CallbackQuery
 from loader import dp
+from keyboards.inline.category_tires_buttons import category_tires_choice
 
 
-@dp.message_handler(commands=['tires'])
-async def tires(message: types.Message):
-    await message.reply(
-        'Маркировка шин и покрышек\n'
-        '/about_tires - Общие вопросы\n'
-        '/labeling_tires - Технологии маркировки\n'
-        '/registration_tires - Регистрация участника оборота товаров\n'
-        '/description_tires - Описание товара\n'
-        '/payment_tires - Оплата кодов маркировки\n'
-        '/ordering_tires - Заказ кодов маркировки\n'
-        '/turnover_tires - Ввод в оборот\n'
-        '/ede_tires - ЭДО\n'
-        '/withdrawal_tires - Вывод товара из оборота\n'
-        '/return_tires - Возврат маркированной продукции\n'
-        '/remarking_tires - Перемаркировка\n'
-        '/aggregation_tires - Агрегирование\n'
-        '/documentation_tires - Документация\n'
-        '/wholesale_tires - Вопросы оптово-розничного звена\n'
-        '/import_tires - Импорт\n'
+@dp.callback_query_handler(text='tires')
+async def tires(call: CallbackQuery):
+    await call.message.answer(
+        'Маркировка шин и покрышек\n\n'
+        'Общие вопросы\n'
+        'Технологии маркировки\n'
+        'Регистрация участника оборота товаров\n'
+        'Описание товара\n'
+        'Оплата кодов маркировки\n'
+        'Заказ кодов маркировки\n'
+        'Ввод в оборот\n'
+        'ЭДО-Сервис электронного документооборота\n'
+        'Вывод из оборота\n'
+        'Возврат маркированной продукции\n'
+        'Перемаркировка\n'
+        'Агрегирование\n'
+        'Документация\n'
+        'Вопросы оптово-розничного звена\n'
+        'Импорт\n',
+        reply_markup=category_tires_choice
     )

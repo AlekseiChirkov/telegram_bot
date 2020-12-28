@@ -22,4 +22,3 @@ async def main_questions(call: CallbackQuery):
         reply_markup=category_main_choice,
     )
 
-#1

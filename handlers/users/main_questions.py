@@ -1,4 +1,3 @@
-from aiogram import types
 from aiogram.types import CallbackQuery
 
 from keyboards.inline.category_main_buttons import category_main_choice

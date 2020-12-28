@@ -1,5 +1,6 @@
 import requests
 import pandas as pd
+import csv
 
 from bs4 import BeautifulSoup
 
@@ -35,19 +36,28 @@ def get_paragraphs():
 
 
 def dataframe():
+    """Writing data in .csv file"""
     headers = get_headers()
+    headers = {'headers': headers}
+    headers = pd.DataFrame.from_dict(headers, orient='index')
+    headers = headers.replace(r'\n', ' ', regex=True)
+    headers = headers.replace(r'\r', ' ', regex=True)
+    headers = headers.replace(r'\t', ' ', regex=True)
+    headers = headers.replace(r'\\t', ' ', regex=True)
+    headers = headers.replace(r'       ', ' ', regex=True)
+    headers = headers.replace(r'      ', ' ', regex=True)
+
     paragraphs = get_paragraphs()
-    data = {'headers': headers, 'paragraphs': paragraphs}
-    df = pd.DataFrame.from_dict(data, orient='index')
-    df = df.replace(r'\n', ' ', regex=True)
-    df = df.replace(r'\r', ' ', regex=True)
-    df = df.replace(r'\t', ' ', regex=True)
-    df = df.replace(r'\\t', ' ', regex=True)
-    df = df.replace(r'       ', ' ', regex=True)
-    df = df.replace(r'      ', ' ', regex=True)
+    paragraphs = {'paragraphs': paragraphs}
+    paragraphs = pd.DataFrame.from_dict(paragraphs, orient='index')
+    paragraphs = paragraphs.replace(r'\n', ' ', regex=True)
+    paragraphs = paragraphs.replace(r'\r', ' ', regex=True)
+    paragraphs = paragraphs.replace(r'\t', ' ', regex=True)
+    paragraphs = paragraphs.replace(r'\\t', ' ', regex=True)
+    paragraphs = paragraphs.replace(r'       ', ' ', regex=True)
+    paragraphs = paragraphs.replace(r'      ', ' ', regex=True)
 
-    return df.to_csv('text.csv', index=False)
+    return headers.to_csv('headers.csv', index=False), paragraphs.to_csv('paragraphs.csv', index=False)
 
 
-text = dataframe()
-print(text)
+dataframe()

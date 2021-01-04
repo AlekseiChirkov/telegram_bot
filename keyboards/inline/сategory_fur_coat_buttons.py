@@ -34,5 +34,9 @@ category_fur_coat_choice = InlineKeyboardMarkup(inline_keyboard=[
     [
         InlineKeyboardButton(text="Знак испорчен ?", callback_data="badge_damaged_fur_coat"),
     ],
+    [
+        InlineKeyboardButton(text="Назад", callback_data="back_main_questions")
+    ],
 ])
-#1
+
+#check

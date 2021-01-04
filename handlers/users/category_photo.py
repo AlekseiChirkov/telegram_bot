@@ -9,6 +9,7 @@ async def photo(call: CallbackQuery):
     await call.message.answer(
         'Маркировка фотоаппаратов и ламп-вспышек\n\n'
         'Общие вопросы\n'
-        'Об эксперименте\n',
+        'Об эксперименте\n'
+        'Назад - вернуться назад',
         reply_markup=category_photo_choice
     )

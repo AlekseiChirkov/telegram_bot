@@ -26,6 +26,9 @@ questions_choice = InlineKeyboardMarkup(inline_keyboard=[
     [
         InlineKeyboardButton(text="Легкая промышленность", callback_data="industrial"),
     ],
+    [
+        InlineKeyboardButton(text="Назад", callback_data="back_questions")
+    ],
 ])
 
 #1

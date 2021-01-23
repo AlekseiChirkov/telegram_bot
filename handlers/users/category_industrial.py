@@ -7,7 +7,8 @@ from keyboards.inline.category_industrial_buttons import category_industrial_cho
 async def industrial(call: CallbackQuery):
     await call.message.answer(
         'Маркировка товаров легкой промышленности\n\n'
-        'Общие вопросы\n',
+        'Общие вопросы\n'
+        'Назад - вернуться назад',
         reply_markup=category_industrial_choice,
     )
 

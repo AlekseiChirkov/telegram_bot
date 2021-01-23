@@ -61,6 +61,9 @@ category_tires_choice = InlineKeyboardMarkup(inline_keyboard=[
         InlineKeyboardButton(text="Импорт",
                              callback_data="import_tires")
     ],
+    [
+        InlineKeyboardButton(text="Назад", callback_data="back_main_questions")
+    ],
 
 ]
 )

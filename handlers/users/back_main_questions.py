@@ -4,8 +4,8 @@ from keyboards.inline.questions_buttons import questions_choice
 from loader import dp
 
 
-@dp.callback_query_handler(text="questions")
-async def questions(call: CallbackQuery):
+@dp.callback_query_handler(text="back_main_questions")
+async def back_main_questions(call: CallbackQuery):
     await call.message.answer(
         "Раздел вопросов.\n"
         "Выберите категорию вопроса:\n"
@@ -20,5 +20,3 @@ async def questions(call: CallbackQuery):
         "'Назад' - вернуться назад",
         reply_markup=questions_choice,
     )
-
-# 1

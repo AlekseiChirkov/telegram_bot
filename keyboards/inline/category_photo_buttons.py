@@ -9,6 +9,7 @@ category_photo_choice = InlineKeyboardMarkup(inline_keyboard=[
         InlineKeyboardButton(text="Об эксперименте",
                              callback_data="photo_exp")
     ],
-
-]
-)
+    [
+        InlineKeyboardButton(text="Назад", callback_data="back_main_questions")
+    ],
+])

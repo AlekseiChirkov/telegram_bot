@@ -5,7 +5,7 @@ from keyboards.inline.category_industrial_buttons import category_industrial_cho
 from data.question_parser import get_headers, get_paragraphs
 
 
-@dp.callback_query_handler(text='about_industrial')
+@dp.callback_query_handler(text='about_industrialq') # Message is too long!!  add q in text for work bot
 async def about_industrial(call: CallbackQuery):
     await call.message.answer(
         f'{str(get_headers()[52])}\n\n'

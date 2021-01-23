@@ -9,7 +9,6 @@ async def help(call: CallbackQuery):
     await call.message.answer(
         "Вы можете выбрать следующие разделы:\n"
         "'Вопросы' - выбрать интересующий вас вопрос.\n"
-        "'Задать вопрос' - задать свой вопрос.\n"
         "'Назад' - вернуться назад",
         reply_markup=help_choice,
     )

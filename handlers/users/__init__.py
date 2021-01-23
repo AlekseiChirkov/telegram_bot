@@ -1,4 +1,3 @@
-from .start import dp
 from .help import dp
 from .questions import dp
 from .category_main import dp

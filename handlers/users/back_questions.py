@@ -4,8 +4,8 @@ from keyboards.inline.help_button import help_choice
 from loader import dp
 
 
-@dp.callback_query_handler(text='help')
-async def help(call: CallbackQuery):
+@dp.callback_query_handler(text='back_questions')
+async def back_questions(call: CallbackQuery):
     await call.message.answer(
         "Вы можете выбрать следующие разделы:\n"
         "'Вопросы' - выбрать интересующий вас вопрос.\n"
@@ -13,4 +13,3 @@ async def help(call: CallbackQuery):
         "'Назад' - вернуться назад",
         reply_markup=help_choice,
     )
-

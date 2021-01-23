@@ -19,6 +19,7 @@ async def about_tobacco(call: CallbackQuery):
 async def rules_tobacco(call: CallbackQuery):
     await call.message.answer(
         f'{str(get_headers()[12])}\n\n'
-        f'{str(get_paragraphs()[12])}'
+        f'{str(get_paragraphs()[12])}',
+        reply_markup=category_tobacco_choice,
     )
 

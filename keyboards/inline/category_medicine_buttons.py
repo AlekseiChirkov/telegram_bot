@@ -27,5 +27,8 @@ category_medicine_choice = InlineKeyboardMarkup(inline_keyboard=[
     [
         InlineKeyboardButton(text="АП и РС", callback_data="automation"),
     ],
+    [
+        InlineKeyboardButton(text="Назад", callback_data="back_main_questions")
+    ],
 ])
 #1

@@ -9,7 +9,8 @@ from loader import dp
 async def shoes(call: CallbackQuery):
     await call.message.answer(
         'Маркировка обуви\n\n'
-        'Вопросы - общие вопросы\n',
+        'Вопросы - общие вопросы\n'
+        'Назад - вернуться назад',
         reply_markup=category_shoes_choice,
     )
 

@@ -21,6 +21,7 @@ async def tires(call: CallbackQuery):
         'Агрегирование\n'
         'Документация\n'
         'Вопросы оптово-розничного звена\n'
-        'Импорт\n',
+        'Импорт\n'
+        'Назад - вернуться назад',
         reply_markup=category_tires_choice
     )
